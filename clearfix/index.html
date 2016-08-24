@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动解决方案</title>
+    <style type="text/css">
+        li {
+            float: left;
+            border: 1px solid #cc3c53;
+            margin: 5px;
+            list-style: none;
+        }
+
+        #demo1:before, #demo1:after {
+            content: "";
+            display: table;
+        }
+
+        #demo1:after {
+            clear: both;
+            overflow: hidden;
+        }
+
+        #demo1 {
+            zoom: 1;
+        }
+
+        /* overflow:auto */
+        #demo2 {
+            overflow: auto;
+            *zoom: 1;
+        }
+
+        /*或 overflow:hidden */
+        #demo2 {
+            overflow: hidden;
+            *zoom: 1;
+        }
+
+        #demo3 {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+<ul id="demo1">
+    <li><img alt="img1" src="http://placehold.it/150x150"></li>
+    <li><img alt="img2" src="http://placehold.it/250x150"></li>
+    <li><img alt="img3" src="http://placehold.it/150x150"></li>
+</ul>
+
+<ul id="demo2">
+    <li><img alt="img1" src="http://placehold.it/150x150"></li>
+    <li><img alt="img2" src="http://placehold.it/250x150"></li>
+    <li><img alt="img3" src="http://placehold.it/150x150"></li>
+</ul>
+
+<ul id="demo3">
+    <li><img alt="img1" src="http://placehold.it/150x150"></li>
+    <li><img alt="img2" src="http://placehold.it/250x150"></li>
+    <li><img alt="img3" src="http://placehold.it/150x150"></li>
+</ul>
+
+</body>
+</html>

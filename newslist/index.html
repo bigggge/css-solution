@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新闻列表解决方案</title>
+    <style>
+        #newslist_demo {
+            width: 600px;
+            padding: 10px;
+            list-style: none;
+        }
+
+        #newslist_demo li {
+            text-align: right;
+            color: #ccc;
+        }
+
+        #newslist_demo li a {
+            float: left;
+            width: 270px;
+            text-align: left;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<h2>传统方法,右浮动,先日期后标题</h2>
+
+<li>
+    <span style="float: right;">2010-07-30</span>
+    <a href="#">css基础-基本知识点梳理</a>
+</li>
+
+<h2>相对绝对定位</h2>
+
+<li style="position:relative;">
+    <a href="#">css基础-基本知识点梳理</a>
+    <span style="position: absolute;right: 100px">2010-07-30</span>
+</li>
+
+<h2>text-align 为 right</h2>
+
+<ul id="newslist_demo" class="nostyle demo">
+    <li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>2012-01-05</li>
+    <li><a href="#">Aliquam tincidunt mauris eu risus.</a>2012-01-05</li>
+    <li><a href="#">Vestibulum auctor.</a>2012-01-05</li>
+</ul>
+
+</body>
+</html>

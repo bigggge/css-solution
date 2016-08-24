@@ -1,0 +1,56 @@
+.doubleline {
+    border: 3px double #ccc
+}
+
+#indented {
+    background-color: #222;
+    width: 300px;
+}
+
+#indented li {
+    border-top: 3px solid #e19e4d;
+    border-bottom: 3px solid #7deeff;
+    color: #cc3c53;
+    line-height: 1.8;
+    font-size: 16px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#indented li p {
+    font-size: 13px;
+    font-weight: normal;
+    max-width: 0;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid black;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #f00;
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+
+    border-right: 10px solid blue;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid green;
+}

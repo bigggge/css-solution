@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单行省略号纯css解决方案</title>
+    <style>
+        #demo1 li {
+            -o-text-overflow: ellipsis; /*兼容opera*/
+            text-overflow: ellipsis; /*这就是省略号*/
+            overflow: hidden; /*设置超过的隐藏*/
+            white-space: nowrap; /*设置不折行*/
+            width: 200px; /*设置宽度*/
+            margin-left: 12px;
+            list-style: disc inside none;
+        }
+
+        #demo2 li {
+            width: 150px;
+            float: left;
+            margin-right: 20px;
+            display: inline;
+        }
+
+        #demo2 img {
+            padding: 2px;
+            border: 1px solid #ccc;
+        }
+
+        #demo2 strong {
+            text-align: center;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+<ul id="demo1">
+    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+    <li>Aliquam tincidunt mauris eu risus.</li>
+    <li>Vestibulum auctor dapibus.</li>
+</ul>
+
+<ul id="demo2">
+    <li><a href="#">
+        <img src="http://placehold.it/150x150" alt="img1">
+        <strong>单行省略号纯css解决方案</strong>
+    </a></li>
+    <li><a href="#">
+        <img src="http://placehold.it/150x150" alt="img2">
+        <strong>单行省略号纯css</strong>
+    </a></li>
+    <li><a href="#">
+        <img src="http://placehold.it/150x150" alt="img3">
+        <strong>解决方案</strong></a>
+    </li>
+</ul>
+
+
+</body>
+</html>

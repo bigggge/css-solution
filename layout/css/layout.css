@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* -------------------------------------------------
+ * layout css 布局
+ * -------------------------------------------------
+*/
+.page{
+    width:100%;
+    min-width:1000px;
+    min-height:100%;
+    /*height:auto !important;*/
+    /*height:100%;*/
+}
+#header,#container,#footer{
+    width:1000px;
+    text-align:left;
+    margin:0 auto;
+    /*clear:both;*/
+}
+#container{
+    padding:20px 0;
+}
+#main,#aside_right,#aside_left{
+    float:left;
+}
+.inner{
+    margin:0 10px;
+}
+/* -------------------------------------------------
+ * no aside
+ * -------------------------------------------------
+*/
+#main{
+    width:1000px;
+}
+/* -------------------------------------------------
+ * one aside
+ * -------------------------------------------------
+*/
+/* aside_left */
+#aside_left{
+    width:300px;
+}
+.aside-left #main{
+    width:700px;
+}
+/* aside-right */
+.aside-right #main{
+    width:700px;
+}
+#aside_right{
+    width:300px;
+}
+/* -------------------------------------------------
+ * two aside
+ * -------------------------------------------------
+*/
+.two-asides #aside_left,.two-asides #aside_right{
+    width:200px;
+}
+.two-asides #main{
+    width:600px;
+}

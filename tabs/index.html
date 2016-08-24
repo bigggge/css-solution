@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tabs标题的解决方案</title>
+    <style>
+        /* Style the list */
+        ul.tab {
+            /*ul自适应宽度*/
+            /*ul 是块状元素，默认地，会填充满它所能占有的宽度*/
+            /*http://chen.junchang.blog.163.com/blog/static/634451920129964238643/*/
+            /*display: inline-block;*/
+            position: absolute;
+            list-style-type: none;
+            padding: 0; /*reset default style*/
+            margin: 0;
+            /*li设为左浮动,防止ul塌陷*/
+            /*overflow 样式值为 非 visilbe 时，*/
+            /*实际上是创建了 CSS 2.1 规范定义的 Block Formatting Contexts。*/
+            /*创建了它的元素，会重新计算其内部元素位置，从而获得确切高度。这样父容器也就包含了浮动元素高度。*/
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Float the list items side by side */
+        ul.tab li {
+            float: left;
+        }
+
+        /* Style the links inside the list items */
+        ul.tab li a {
+            /*记住对行内元素*/
+            /*设置宽度 width 无效。*/
+            /*设置高度 height 无效，可以通过 line-height 来设置。*/
+            /*设置 margin 只有左右 margin 有效，上下无效。*/
+            /*设置 padding 只有左右 padding 有效，上下则无效。*/
+            /*注意元素范围是增大了，但是对元素周围的内容是没影响的。*/
+            /*https://github.com/paddingme/DailyReading/issues/5*/
+            /*https://dfang.wordpress.com/2009/08/05/%E8%AF%91%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8Cpadding/*/
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none; /*文本的修饰*/
+            transition: 0.3s; /*过渡效果*/
+            font-size: 17px;
+        }
+
+        /* Change background color of links on hover */
+        ul.tab li a:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        ul.tab li a:focus, .active {
+            background-color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+<ul class="tab">
+    <li><a href="#" class="active">Tab One</a></li>
+    <li><a href="#">Tab Two</a></li>
+    <li><a href="#">Tab Three</a></li>
+    <li><a href="#">Tab Four</a></li>
+</ul>
+</body>
+</html>

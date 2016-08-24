@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图文混排解决方案</title>
+    <style>
+
+        #demo1 {
+            background-image: url('images/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: 150px 150px;
+            padding-left: 160px;
+            width: 210px;
+        }
+
+        #demo2 img,
+        #demo2 .flo-right {
+            float: left;
+            display: inline;
+        }
+
+        #demo2 .flo-right {
+            margin-left: 10px;
+            width: 400px;
+        }
+
+        /* clearfix */
+        .clearfix:before, .clearfix:after {
+            content:"";
+            display:table;
+        }
+        .clearfix:after{
+            clear:both;
+            overflow:hidden;
+        }
+        .clearfix{
+            zoom:1;
+        }
+
+    </style>
+</head>
+<body>
+
+<h2>背景图片法</h2>
+<div id="demo1">
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+</div>
+
+<h2>浮动法</h2>
+
+<div id="demo2" class="clearfix">
+    <img src="images/img250-165.jpg" alt="浮动法demo">
+    <div class="flo-right">
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        <ul>
+            <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in,
+                diam. Sed arcu. Cras consequat.
+            </li>
+            <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.
+                Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+            </li>
+        </ul>
+        <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique
+            cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+        <p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate,
+            nunc.</p>
+    </div>
+</div>
+
+<h2>背景图片法</h2>
+<h2>背景图片法</h2>
+<h2>背景图片法</h2>
+<h2>背景图片法</h2>
+
+</body>
+</html>
