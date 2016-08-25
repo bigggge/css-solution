@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴效果解决方案</title>
+    <script src="js/main.js"></script>
+    <style>
+
+        button.accordion {
+            background-color: #eee;
+            color: #000;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: #dddddd;
+        }
+
+        div.panel {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            background-color: white;
+            transition: 0.6s ease-in-out;
+            opacity: 0;
+        }
+
+        div.panel.show {
+            opacity: 1;
+            max-height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+    <p>panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel</p>
+</div>
+<button class="accordion">Section 2</button>
+<div class="panel">
+    <p>panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel</p>
+</div>
+<button class="accordion">Section 3</button>
+<div class="panel">
+    <p>panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel
+        panelpanelpanelpanelpanelpanelpanelpanelpanel</p>
+</div>
+
+</body>
+</html>

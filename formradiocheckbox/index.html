@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form radio & checkbox解决方案</title>
+    <style>
+
+        /*reset form elements*/
+        input, select, label {
+            vertical-align: middle;
+        }
+
+        /*reset form radio & checkbox*/
+        .form-radio, .form-checkbox {
+            margin: 0 5px 0 0; /*与右侧文字的间距*/
+            padding: 0;
+            width: 13px;
+            height: 13px;
+            vertical-align: middle;
+            font: 13px Helvetica, Arial, sans-serif;
+        }
+
+        #demo2{
+            font-size:13px;
+        }
+        #demo3{
+            font-size:14px;
+        }
+
+    </style>
+</head>
+<body>
+
+<form id="demo1" class="demo" name="form1" method="post" action="#">
+    <div class="form-item">
+        <label>举报类型：</label>
+        <div class="form-special-wrap">
+
+            <label><input type="radio" checked="checked" value="1" class="form-radio" name="reportType">垃圾广告</label>
+            <label><input type="radio" value="2" class="form-radio" name="reportType">色情</label>
+            <label><input type="radio" value="3" class="form-radio" name="reportType">虚假广告</label>
+            <label><input type="radio" value="4" class="form-radio" name="reportType">其他</label>
+
+        </div>
+    </div>
+</form>
+
+<form id="demo2" class="demo" name="form1" method="post" action="#">
+    <div class="form-item">
+        <label>举报类型：</label>
+        <div class="form-special-wrap">
+
+            <label><input type="radio" checked="checked" value="1" class="form-radio" name="reportType">垃圾广告</label>
+            <label><input type="radio" value="2" class="form-radio" name="reportType">色情</label>
+            <label><input type="radio" value="3" class="form-radio" name="reportType">虚假广告</label>
+            <label><input type="radio" value="4" class="form-radio" name="reportType">其他</label>
+
+        </div>
+    </div>
+</form>
+
+<form id="demo3" class="demo" name="form1" method="post" action="#">
+    <div class="form-item">
+        <label>举报类型：</label>
+        <div class="form-special-wrap">
+
+            <label><input type="radio" checked="checked" value="1" class="form-radio" name="reportType">垃圾广告</label>
+            <label><input type="radio" value="2" class="form-radio" name="reportType">色情</label>
+            <label><input type="radio" value="3" class="form-radio" name="reportType">虚假广告</label>
+            <label><input type="radio" value="4" class="form-radio" name="reportType">其他</label>
+
+        </div>
+    </div>
+</form>
+
+
+
+</body>
+</html>

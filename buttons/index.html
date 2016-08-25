@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buttons解决方案</title>
+    <style>
+        .button {
+            padding: 15px 25px;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: blanchedalmond;
+            border: none;
+            border-radius: 15px;
+            /*box-shadow 属性向框添加一个或多个阴影。*/
+            box-shadow: -2px 9px #999;
+        }
+
+        .button:hover {
+            background-color: slateblue;
+        }
+
+        .button:active {
+            background-color: deepskyblue;
+            box-shadow: 0 5px #666;
+            /*transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。*/
+            transform: translateY(10px);
+        }
+
+        .button-hover {
+            border-radius: 2px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            cursor: pointer;
+            margin: 55px;
+        }
+
+        .button-hover span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button-hover span:after {
+            content: '>';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button-hover:hover span {
+            padding-right: 25px;
+        }
+
+        .button-hover:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<button class="button">Click Me</button>
+<button class="button-hover"><span>Hover </span></button>
+
+
+</body>
+</html>
