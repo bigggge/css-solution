@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模态对话框解决方案</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<img id="img" src="http://www.w3schools.com/howto/img_fjords.jpg" alt="image" width="300" height="200">
+<div id="modal" class="modal">
+    <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="caption"></div>
+</div>
+
+<script>
+
+    var modal = document.getElementById("modal");
+    var img = document.getElementById("img");
+    var modalImg = document.getElementById("modal-img");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+        captionText.innerHTML = this.alt;
+    };
+
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+</script>
+
+</body>
+</html>

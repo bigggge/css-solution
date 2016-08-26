@@ -3,12 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>css解决方案</title>
+    <style>
+
+        ul {
+            list-style: none;
+        }
+
+        li a {
+            max-width: 300px;
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: white;
+            padding: 6px;
+            text-decoration: none;
+            color: black;
+            display: block
+        }
+
+        li a[href^="http"] {
+            max-width: 200px;
+            font-size: small;
+        }
+
+        li a:hover {
+            background-color: #eee;
+        }
+    </style>
 </head>
 <body>
-内容来自<a href="http://www.w3cplus.com/">http://www.w3cplus.com/</a>
-<a href="http://www.w3schools.com/">http://www.w3schools.com/</a>
+
 
 <ul>
+    <li><a href="http://www.w3cplus.com/">http://www.w3cplus.com/</a></li>
+    <li><a href="http://www.w3schools.com/">http://www.w3schools.com/</a></li>
     <li><a href="layout/index.html" target="_blank">固定宽度布局解决方案</a></li>
     <li><a href="border/index.html" target="_blank">border解决方案</a></li>
     <li><a href="clearfix/index.html" target="_blank">清除浮动解决方案</a></li>
@@ -20,7 +47,11 @@
     <li><a href="slideshow/index.html" target="_blank">slideshow解决方案</a></li>
     <li><a href="buttons/index.html" target="_blank">buttons解决方案</a></li>
     <li><a href="accordion/index.html" target="_blank">手风琴效果解决方案</a></li>
-    <li><a href="buttons/index.html" target="_blank">buttons解决方案</a></li>
+    <li><a href="modal/index.html" target="_blank">模态对话框解决方案</a></li>
+    <li><a href="dropdowns/index.html" target="_blank">dropdowns解决方案</a></li>
+    <li><a href="filter/index.html" target="_blank">filter解决方案</a></li>
+    <li><a href="progressbar/index.html" target="_blank">progressbar解决方案</a></li>
+    <li><a href="verticalcenter/index.html" target="_blank">vertical-center解决方案</a></li>
 </ul>
 </body>
 </html>

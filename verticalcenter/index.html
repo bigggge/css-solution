@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vertical-center解决方案</title>
+    <style>
+        /*https://www.smashingmagazine.com/2013/08/absolute-horizontal-vertical-centering-css/*/
+        /*http://blog.csdn.net/freshlover/article/details/11579669*/
+        /*绝对定位居中(Absolute Centering)技术*/
+        .div1 {
+            height: 200px;
+            width: 200px;
+            background: #90dbd5;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        /*变形（Transforms）*/
+        .div2 {
+            height: 150px;
+            width: 150px;
+            background: #7be550;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .Center-Container.is-Table {
+            display: table;
+        }
+
+        .is-Table .Table-Cell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .is-Table .Center-Block {
+            width: 50%;
+            margin: 0 auto;
+            background: blue;
+        }
+
+        /*http://zh.learnlayout.com/flexbox.html*/
+        /*CSS3 Flexbox*/
+        .flexbox {
+            background: #f2f2f2;
+            width: 300px;
+            height: 500px;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="div1">div1</div>
+
+<div class="div2">div2</div>
+
+<div class="flexbox">
+    <span style="z-index:999; color:blue; font-size:20px;">flexbox</span>
+</div>
+
+</body>
+</html>

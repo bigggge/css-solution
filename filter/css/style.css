@@ -1,0 +1,38 @@
+#my-input {
+    background-image: url("../images/searchicon.png");
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: auto;
+    font-size: 16px;
+    padding: 12px 20px 12px 35px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#my-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+#my-ul li a {
+    border: 1px solid #dddddd;
+    margin-top: -1px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+}
+
+#my-ul li a.header {
+    background-color: #e2e2e2;
+    cursor: default;
+}
+
+/*:not(selector) 选择器匹配非指定元素/选择器的每个元素。*/
+#my-ul li a:hover:not(.header) {
+    background-color: #eee;
+}
