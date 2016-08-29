@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cards解决方案</title>
+    <style>
+        /*contact chips*/
+        .chip {
+            display: inline-block;
+            padding: 0 25px;
+            height: 50px;
+            font-size: 16px;
+            line-height: 50px;
+            /*椭圆*/
+            border-radius: 25px;
+            background-color: #f1f1f1;
+        }
+
+        .chip img {
+            float: left;
+            margin: 0 10px 0 -25px;
+            height: 50px;
+            width: 50px;
+            /*圆*/
+            border-radius: 50%;
+        }
+
+        .closebtn {
+            position: relative;
+            right: -12px;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .closebtn:hover {
+            color: #000;
+        }
+
+        /*cards*/
+        .card {
+            margin-top: 100px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 200px;
+            border-radius: 5px;
+        }
+
+        .card:hover {
+            /*h-shadow 水平阴影的位置*/
+            /*v-shadow垂直阴影的位置*/
+            /*blur 模糊距离*/
+            /*spread 阴影的尺寸*/
+            /*color 阴影的颜色*/
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="chip">
+    <img src="img_avatar2.png" alt="person" width="96">
+    John
+    <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+</div>
+
+<div class="card">
+    <img src="img_avatar2.png" alt="avatar" style="width: 100%">
+    <div class="container">
+        <h4><b>GGG</b></h4>
+        <p>Android Developer</p>
+    </div>
+</div>
+</body>
+</html>

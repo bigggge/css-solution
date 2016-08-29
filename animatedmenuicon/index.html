@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menuicon解决方案</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--使用 function animate(){} 注册的函数，相当于注册在 window 上，-->
+<!--即 window.animate = function(){}；-->
+<!--但 onclick 事件中调用 animate，会先在当前对象中找 animate 方法。 -->
+<!--此时当前对象为 Element。所以调用的是当前对象的 Eelement 的 animate 方法。-->
+<!--chrome等浏览器，是有 Element.prototype.animate 方法的。-->
+<!--而safari 浏览器中没有此方法。-->
+<div class="container" onclick="window.animate(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+</div>
+
+<script>
+    function animate(x) {
+        x.classList.toggle("change");
+    }
+</script>
+
+</body>
+</html>
