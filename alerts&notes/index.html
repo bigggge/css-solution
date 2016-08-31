@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>alerts&notes解决方案</title>
+    <style>
+        .alert {
+            padding: 20px;
+            background-color: orangered;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+
+        .danger {
+            padding: 2px 10px;
+            background-color: #ffdddd;
+            border-left: 6px solid #f55555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="alert">
+    <span class="closebtn"
+          onclick="this.parentElement.style.display='none" ;>
+        &times;
+    </span>
+    This is an alert box.
+</div>
+
+<div class="danger">
+    <p><strong>Danger!</strong> Some text...</p>
+</div>
+
+</body>
+</html>
