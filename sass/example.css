@@ -1,14 +1,29 @@
 @charset "UTF-8";
+/*
+1.Sass 和 SCSS 其实是同一种东西，我们平时都称之为 Sass，
+两者之间不同之处有以下两点：
+
+文件扩展名不同，Sass 是以“.sass”后缀为扩展名，而 SCSS 是以“.scss”后缀为扩展名
+
+语法书写方式不同，Sass 是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，
+而 SCSS 的语法书写和我们的 CSS 语法书写方式非常类似。
+
+2.Sass 的编译有多种方法：
+命令编译
+GUI工具编译
+自动化编译(Grunt 和 Gulp)
+
+*/
 nav {
   width: 100px;
   color: #F90; }
 
-#content article {
-  padding-margin-bottom: 1.4em; }
-  #content article h1 {
-    color: #333333; }
-  #content article aside {
-    background-color: #eeeeee; }
+#content article h1 {
+  color: #333333; }
+#content article p {
+  margin-bottom: 1.4em; }
+#content article aside {
+  background-color: #eeeeee; }
 
 article a {
   color: blue; }
