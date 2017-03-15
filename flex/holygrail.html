@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <style>
+
+        body {
+            text-align: center;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column
+        }
+
+        .content {
+            background-color: #00a2ff;
+        }
+
+        header, footer {
+            background-color: grey;
+        }
+
+        .nav {
+            order: -1;
+            background-color: #00a000;
+
+        }
+
+        .aside {
+            background-color: yellow;
+
+        }
+
+        @media (min-width: 768px) {
+            .main {
+                flex-direction: row;
+                flex: 1;
+            }
+
+            .content {
+                flex: 1;
+            }
+
+            .nav, .aside {
+                /* flex属性是flex-grow, flex-shrink 和 flex-basis的简写，
+                默认值为0 1 auto */
+                /* 12em is the width of the columns */
+                flex: 0 0 12em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>header</header>
+<div class="main">
+    <main class="content">content</main>
+    <nav class="nav">nav</nav>
+    <aside class="aside">aside</aside>
+</div>
+<footer>footer</footer>
+</body>
+</html>

@@ -1,0 +1,150 @@
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+}
+
+/*基础布局*/
+.column.col-1 {
+    flex: 0 0 8.33333%;
+}
+
+.column.col-2 {
+    flex: 0 0 16.66667%;
+}
+
+.column.col-3 {
+    flex: 0 0 25%;
+}
+
+.column.col-4 {
+    flex: 0 0 33.33333%;
+}
+
+.column.col-5 {
+    flex: 0 0 41.66667%;
+}
+
+.column.col-6 {
+    flex: 0 0 50%;
+}
+
+.column.col-7 {
+    flex: 0 0 58.33333%;
+}
+
+.column.col-8 {
+    flex: 0 0 66.66667%;
+}
+
+.column.col-9 {
+    flex: 0 0 75%;
+}
+
+.column.col-10 {
+    flex: 0 0 83.33333%;
+}
+
+.column.col-11 {
+    flex: 0 0 91.66667%;
+}
+
+.column.col-12 {
+    flex: 0 0 100%;
+}
+
+/*响应式*/
+.columns.fit > .column {
+    flex: 1;
+}
+
+.full > .column {
+    flex: 0 0 100%;
+}
+
+.half > .column {
+    flex: 0 0 50%
+}
+
+.one-third > .column {
+    flex: 0 0 33.3333%
+}
+
+.one-quarter > .column {
+    flex: 0 0 25%
+}
+
+/* Medium screens */
+@media (min-width: 769px) and (max-width: 999px) {
+    .medium-fit > .column {
+        flex: 1;
+    }
+
+    .medium-full > .column {
+        flex: 0 0 100%;
+    }
+
+    .medium-half > .column {
+        flex: 0 0 50%
+    }
+
+    .medium-one-third > .column {
+        flex: 0 0 33.3333%
+    }
+
+    .medium-one-quarter > .column {
+        flex: 0 0 25%
+    }
+}
+
+/* Large screens */
+@media (min-width: 1000px) {
+    .large-fit > .column {
+        flex: 1;
+    }
+
+    .large-full > .column {
+        flex: 0 0 100%;
+    }
+
+    .large-half > .column {
+        flex: 0 0 50%
+    }
+
+    .large-one-third > .column {
+        flex: 0 0 33.3333%
+    }
+
+    .large-one-quarter > .column {
+        flex: 0 0 25%
+    }
+}
+
+/*定义项目在交叉轴上如何对齐*/
+.columns.col-top {
+    align-items: flex-start;
+}
+
+.columns.col-center {
+    align-items: center;
+}
+
+.columns.col-bottom {
+    align-items: flex-end;
+}
+
+/*属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性*/
+.column.col-top {
+    align-self: flex-start;
+}
+
+.column.col-center {
+    align-self: center;
+}
+
+.column.col-bottom {
+    align-self: flex-end;
+}
