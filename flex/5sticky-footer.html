@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>粘性页脚</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        .content {
+            min-height: 100%;
+            /* equal to footer height */
+            margin-bottom: -100px;
+        }
+
+        .content:after {
+            height: 100px;
+            content: "";
+            display: block;
+        }
+
+        footer {
+            height: 100px;
+            background: orange;
+        }
+
+        .site {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .content2 {
+            flex: 1;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<!--1 伪元素 + 负margin-->
+<div class="content">
+    Content
+    <div style="height: 1000px;background-color: #d8fcff">
+
+    </div>
+</div>
+
+<footer>Footer</footer>
+
+
+<!--2-->
+<div class="site">
+    <header>header</header>
+    <main class="content2">
+        <!--<div style="height: 1000px;background-color: #d8fcff">-->
+
+        <!--</div>-->
+    </main>
+    <footer>footer</footer>
+</div>
+
+</body>
+</html>

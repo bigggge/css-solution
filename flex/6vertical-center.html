@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中</title>
+</head>
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .aligner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 20em;
+    }
+
+    .aligner-item {
+        /*如果所有项目的flex-grow属性都为1，则它们将等分剩余空间*/
+        flex: 1;
+    }
+
+    .aligner-item-top {
+        align-self: flex-start;
+    }
+
+    .aligner-item-bottom {
+        align-self: flex-end;
+    }
+
+    .demo {
+        text-align: center;
+        width: 100%;
+        background: hsla(0, 0%, 0%, 0.2);
+        border-radius: 3px;
+        padding: .8em 1em;
+    }
+</style>
+<body>
+
+
+<div class="aligner">
+
+    <div class="aligner-item aligner-item-top">
+        <div class="demo">Top</div>
+    </div>
+    <div class="aligner-item">
+        <div class="demo">Middle</div>
+    </div>
+    <div class="aligner-item aligner-item-bottom">
+        <div class="demo">Bottom</div>
+    </div>
+
+</div>
+
+</body>
+</html>

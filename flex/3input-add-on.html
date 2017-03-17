@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入附加组件</title>
+    <style>
+
+        .control-group {
+            width: 220px;
+            display: table;
+        }
+
+        .input {
+            height: 40px;
+            border: 1px solid #bbb;
+            display: table-cell;
+            width: 100%;
+        }
+
+        .addon {
+            display: table-cell;
+            /*width: 1px;*/
+            /*white-space: nowrap;*/
+            background: #eee;
+            padding: 0 8px;
+            border: 1px solid #bbb;
+        }
+
+        /*.addon:first-child {*/
+        /*border-right: none;*/
+        /*}*/
+
+        /*.addon:last-child {*/
+        /*border-left: none;*/
+        /*}*/
+
+        /*.addon:first-child, input:first-child {*/
+        /*border-top-left-radius: 5px;*/
+        /*border-bottom-left-radius: 5px;*/
+        /*}*/
+
+        /*.addon:last-child, input:last-child {*/
+        /*border-top-right-radius: 5px;*/
+        /*border-bottom-right-radius: 5px;*/
+        /*}*/
+
+        .input-add-on {
+            text-align: justify;
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .input-add-on-field, .input-add-on-item {
+            border: 1px solid hsla(31, 15%, 50%, .25);
+            padding: .5em 1em;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="control-group">
+    <!--<div class="addon">$</div>-->
+    <input class="input" type="text">
+    <div class="addon">.00</div>
+</div>
+
+
+<div class="input-add-on">
+    <span class="input-add-on-item">ADD</span>
+    <input class="input-add-on-field">
+    <span class="input-add-on-item">个</span>
+
+</div>
+
+
+</body>
+</html>

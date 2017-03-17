@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>媒体对象</title>
+</head>
+<style>
+
+    .stbody {
+        min-height: 70px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px dashed grey;
+    }
+
+    .stimg {
+        float: left;
+        height: 60px;
+        width: 60px;
+        border: 1px solid #dedede;
+        padding: 5px;
+    }
+
+    .sttext {
+        /*让文字环绕在图片周围*/
+        overflow: hidden;
+        min-width: 50px;
+        /*文本换行*/
+        word-wrap: break-word;
+        padding: 5px 15px;
+    }
+
+    .attachment {
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+    .media {
+        display: flex;
+        align-items: flex-start;
+        border: 1px dashed grey;
+    }
+
+    .media-figure {
+        margin-right: 1em;
+    }
+
+    .media-body {
+        flex: 1;
+    }
+
+    .media.reverse > .media-figure {
+        order: 1;
+        margin: 0 0 0 1em;
+    }
+
+
+</style>
+<body>
+
+
+<div class="stbody">
+    <div class="stimg">img part</div>
+    <div class="sttext">text parttext parttext parttext parttext parttext parttext
+        parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext
+        parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext
+        partarttext parttext parttext parttext parttext parttext
+        parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext
+        parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext
+        parttext parttext parttextext parttext parttext parttext parttext parttext parttext part
+    </div>
+    <div class="stbody attachment">
+        <div class="stimg">img part</div>
+        <div class="sttext">text parttext parttext parttext parttext parttext parttext parttext parttext parttext
+            parttext
+            parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext
+            parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext
+            parttext parttext parttext parttext part
+        </div>
+
+    </div>
+</div>
+
+<div class="media">
+    <img class="media-figure" src="4img_avatar2.png" alt="" style="width: 50px;height: 50px">
+    <p class="media-body">text parttext parttext parttext parttext parttext parttext parttext parttext parttext
+        parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext
+        parttext</p>
+    <div>
+        <div class="media">
+            <img class="media-figure" src="4img_avatar2.png" alt="" style="width: 50px;height: 50px">
+            <p class="media-body">text parttext parttext parttext parttext parttext parttext parttext parttext parttext
+                parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext
+                parttext</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="media reverse">
+    <img class="media-figure" src="4img_avatar2.png" alt="" style="width: 50px;height: 50px">
+    <p class="media-body">text parttext parttext parttext parttext parttext parttext parttext parttext parttext
+        parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext parttext
+        parttext</p>
+</div>
+
+</body>
+</html>
