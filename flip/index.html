@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>翻转效果</title>
+    <style>
+
+        .flip, .front, .back {
+            width: 380px;
+            height: 270px;
+        }
+
+        .flip {
+            transition: 6s;
+            transform-style: preserve-3d;
+        }
+
+        .front, .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /*隐藏被旋转的 div 元素的背面*/
+            backface-visibility: hidden;
+        }
+
+        .front {
+            background-color: grey;
+            z-index: 2;
+        }
+
+        .back {
+            background-color: greenyellow;
+            transform: rotateY(-180deg);
+        }
+
+        .flip:hover {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+<div class="flip">
+    <div class="front">Hover</div>
+    <div class="back">Hello World!</div>
+</div>
+</body>
+</html>

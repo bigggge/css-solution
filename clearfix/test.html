@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            list-style: none;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+        ul {
+            border: solid 1px grey;
+        }
+    </style>
+</head>
+<body>
+
+<ul id="demo1" class="nostyle demo clearfix">
+    <li><img alt="img1" src="http://placehold.it/150/ffffff/00c5e3&amp;text=demo"></li>
+    <li><img alt="img2" src="http://placehold.it/150/ffffff/00c5e3&amp;text=demo"></li>
+    <li><img alt="img3" src="http://placehold.it/150/ffffff/00c5e3&amp;text=demo"></li>
+</ul>
+
+</body>
+</html>
