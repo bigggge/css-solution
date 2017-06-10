@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>焦点轮播图</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      #list {
+        position: absolute;
+        width: 4200px;
+        height: 400px;
+      }
+
+      img {
+        float: left;
+      }
+
+      #dots {
+        width: 100px;
+        height: 10px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 20px;
+        z-index: 2;
+
+      }
+
+      #dots span {
+        display: inline-block;
+        border: 1px solid black;
+        background-color: grey;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+      }
+
+      #dots span.on {
+        background-color: orange;
+      }
+
+      .arrow {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, .3);
+        width: 30px;
+        height: 30px;
+        text-align: center;
+      }
+
+      .arrow:hover {
+        background-color: rgba(0, 0, 0, .5);
+
+      }
+
+      #prev {
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+
+      #next {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+
+    </style>
+  </head>
+  <body>
+    <script>
+
+      window.onload = function () {
+        var container = document.getElementById('container');
+        var list = document.getElementById('list');
+        var dots = document.getElementById('dots').getElementsByTagName('span');
+        var prev = document.getElementById('prev');
+        var next = document.getElementById('next');
+        var index = 1;
+        var animated = false;
+        var timer;
+
+        function showButton () {
+
+          for (var i = 0; i < dots.length; i++) {
+            if (dots[i].className === 'on') {
+              dots[i].className = '';
+              break;
+            }
+          }
+          dots[index - 1].className = 'on';
+        }
+
+        function animate (offset) {
+          if (animated) {
+            return;
+          }
+          animated = true;
+          var newLeft = parseInt(list.style.left) + offset;
+          var time = 300;
+          var interval = 10;
+          var speed = offset / (time / interval); // 每次位移量
+
+          function go () {
+            if ((speed < 0 && parseInt(list.style.left) > newLeft) || // next
+              (speed > 0 && parseInt(list.style.left) < newLeft)) { // prev
+              list.style.left = parseInt(list.style.left) + speed + 'px';
+              setTimeout(go, interval);
+            } else {
+              animated = false;
+              list.style.left = newLeft + 'px';
+              if (newLeft > -600) {
+                list.style.left = -3000 + 'px';
+              }
+              if (newLeft < -3000) {
+                list.style.left = -600 + 'px';
+              }
+            }
+          }
+
+          go();
+        }
+
+        next.onclick = function () {
+          if (index >= 5) {
+            index = 1;
+          } else {
+            index += 1;
+          }
+
+          showButton();
+          animate(-600);
+        };
+
+        prev.onclick = function () {
+          if (index <= 1) {
+            index = 5;
+          } else {
+            index -= 1;
+          }
+          showButton();
+          animate(600);
+        };
+
+        for (var i = 0; i < dots.length; i++) {
+          dots[i].onclick = function () {
+
+            if (this.className === 'on') {
+              return;
+            }
+            var idx = this.getAttribute('index');
+            var offset = -600 * (idx - index);
+
+            animate(offset);
+            index = idx;
+            showButton();
+          };
+        }
+
+        function play () {
+          timer = setInterval(function () {
+            next.onclick();
+          }, 1000);
+        }
+
+        function stop () {
+          clearInterval(timer);
+        }
+
+        container.onmouseover = stop;
+        container.onmouseout = play;
+
+        play();
+      };
+
+    </script>
+
+    <div id="container">
+      <div id="list" style="left: -600px;">
+        <img src="img/5.jpg" alt="1"/>
+        <img src="img/1.jpg" alt="1"/>
+        <img src="img/2.jpg" alt="2"/>
+        <img src="img/3.jpg" alt="3"/>
+        <img src="img/4.jpg" alt="4"/>
+        <img src="img/5.jpg" alt="5"/>
+        <img src="img/1.jpg" alt="5"/>
+      </div>
+      <div id="dots">
+        <span index="1" class="on"></span>
+        <span index="2"></span>
+        <span index="3"></span>
+        <span index="4"></span>
+        <span index="5"></span>
+      </div>
+      <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+      <a href="javascript:;" id="next" class="arrow">&gt;</a>
+    </div>
+
+  </body>
+</html>
